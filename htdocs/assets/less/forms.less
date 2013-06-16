@@ -1,0 +1,100 @@
+// Form element styling
+
+.btn {
+	display: block;
+	padding: 10px 20px;
+	margin: 5px 0;
+	border-radius: 5px;
+	border: 0 none;
+	background: @c-turquoise;
+	color: white;
+	.font-smoothing;
+	font-family: @f-body;
+	font-weight: bold;
+
+	&:active {
+		box-shadow: 0 2px 1px 0 rgba(0,0,0,0.5) inset;
+		padding-top: 12px;
+		padding-bottom: 8px;
+	}
+
+	&.btn-blue {
+		background: @c-blue;
+	}
+	&.btn-green {
+		background: @c-green;
+	}
+	&.btn-yellow {
+		background: @c-yellow;
+		color: @c-black;
+	}
+	&.btn-orange {
+		background: @c-orange;
+	}
+	&.btn-lightgrey {
+		background: @c-lightgrey;
+		color: @c-black;
+	}
+	&.btn-mediumgrey {
+		background: @c-mediumgrey;
+	}
+	&.btn-darkgrey {
+		background: @c-darkgrey;
+	}
+	&.btn-black {
+		background: @c-black;
+	}
+}
+
+
+
+form {
+
+	.field {
+		.cf; // Clearfix
+		width: 100%;
+		display: block;
+		margin: 10px 0;
+		
+		.field-label {
+			padding: 6px 15px 0 0;
+			float: left;
+			width: 40%;
+			text-align: right;
+		}
+		.field-control {
+			float: right;
+			width: 60%;
+		}
+	}
+
+	h1 {
+		font-size: 1.2em;
+		border-bottom: 1px solid @c-lightgrey;
+		padding: 0 0 5px 0;
+		margin: 0;
+	}
+
+	input, input[type="text"], textarea {
+		font-family: @f-body;
+		padding: 5px 10px;
+		border-radius: 5px;
+		outline: none;
+		border: 1px solid @c-lightgrey;
+		max-width: 100%;
+
+		&:focus {
+			box-shadow: 0 0 5px 1px @c-turquoise;
+		}
+	}
+
+	input[type="checkbox"] {
+		margin-right: 5px;
+	}
+
+	button, input[type="button"] {
+		.btn;
+	}
+
+
+}
