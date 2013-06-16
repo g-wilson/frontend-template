@@ -1,5 +1,7 @@
 // Form element styling
 
+@btn-hover-lightness: 10%;
+
 .btn {
 	display: block;
 	padding: 10px 20px;
@@ -12,43 +14,60 @@
 	font-family: @f-body;
 	font-weight: bold;
 
+	&.btn-inline { float: left; margin-right: 10px; }
+
 	&:active {
 		box-shadow: 0 2px 1px 0 rgba(0,0,0,0.5) inset;
 		padding-top: 12px;
 		padding-bottom: 8px;
 	}
+	&:hover {
+		background: lighten(@c-turquoise, @btn-hover-lightness);
+	}
 
 	&.btn-blue {
 		background: @c-blue;
+		&:hover { background: lighten(@c-blue, @btn-hover-lightness); }
 	}
 	&.btn-green {
 		background: @c-green;
+		&:hover { background: lighten(@c-green, @btn-hover-lightness); }
 	}
 	&.btn-yellow {
 		background: @c-yellow;
+		&:hover { background: lighten(@c-yellow, @btn-hover-lightness); }
 		color: @c-black;
 	}
 	&.btn-orange {
 		background: @c-orange;
+		&:hover { background: lighten(@c-orange, @btn-hover-lightness); }
+	}
+	&.btn-red {
+		background: @c-red;
+		&:hover { background: lighten(@c-red, @btn-hover-lightness); }
 	}
 	&.btn-lightgrey {
 		background: @c-lightgrey;
+		&:hover { background: lighten(@c-lightgrey, @btn-hover-lightness); }
 		color: @c-black;
 	}
 	&.btn-mediumgrey {
 		background: @c-mediumgrey;
+		&:hover { background: lighten(@c-mediumgrey, @btn-hover-lightness); }
 	}
 	&.btn-darkgrey {
 		background: @c-darkgrey;
+		&:hover { background: lighten(@c-darkgrey, @btn-hover-lightness); }
 	}
 	&.btn-black {
 		background: @c-black;
+		&:hover { background: lighten(@c-black, @btn-hover-lightness); }
 	}
 }
 
 
 
-form {
+form.form {
 
 	.field {
 		.cf; // Clearfix
@@ -59,12 +78,12 @@ form {
 		.field-label {
 			padding: 6px 15px 0 0;
 			float: left;
-			width: 40%;
+			width: 30%;
 			text-align: right;
 		}
 		.field-control {
 			float: right;
-			width: 60%;
+			width: 70%;
 		}
 	}
 
@@ -75,12 +94,13 @@ form {
 		margin: 0;
 	}
 
-	input, input[type="text"], textarea {
+	input[type="password"], input[type="text"], textarea {
 		font-family: @f-body;
 		padding: 5px 10px;
 		border-radius: 5px;
 		outline: none;
 		border: 1px solid @c-lightgrey;
+		min-width: 70%;
 		max-width: 100%;
 
 		&:focus {

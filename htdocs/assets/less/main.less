@@ -13,19 +13,22 @@
 // Global variables
 
 	// Structural
-	@page-width: 80%;
+	@page-width: 70%;
 	@max-page-width: 1120px;
 	@gutter-width: 10px;
 
 	// Colours
 	@c-white: #FFF;
 	@c-lightgrey: #E6E6E6;
+	@c-darkgrey: #333333;
+	@c-mediumgrey: #777777;
 	@c-black: #222222;
 	@c-turquoise: #50AEC2;
 	@c-blue: #3A7CB9;
 	@c-green: #29A76D;
 	@c-orange: #E36C3C;
 	@c-yellow: #FED146;
+	@c-red: #D6454C;
 
 	// Typography
 	@f-body: 'Open Sans', sans-serif;
@@ -33,3 +36,27 @@
 
 	// Details
 	.rounded { border-radius: 5px; }
+
+	// Handy things
+	.no-select {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.font-smoothing {
+		-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+	}
+
+	.circle (@radius: 50px) {	
+		border-radius: @radius;
+		width: @radius; height: @radius;
+	}
+
+	// Animation
+	.animate-width(@duration) {
+		-webkit-transition: width @duration;
+	}
