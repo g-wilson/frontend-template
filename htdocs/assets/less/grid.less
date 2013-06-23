@@ -170,7 +170,7 @@ html, body {
 
 @media screen 
 	and (min-width: 479px)
-	and (max-width: 960px) {
+	and (max-width: @max-page-width) {
 	.contain {
 		width: 90%;
 	}
@@ -184,4 +184,38 @@ html, body {
 }
 .g-row.g-debug [class*='g-']:nth-child(even) {
 	background: #DADADA;
+}
+
+// This type of grid makes it easy to iterate any number of (fixed height) grid "boxes" such as products
+.g-grid {
+
+	.g-box {
+		float: left;
+		padding-right: @gutter-width;
+	}
+
+	@media screen and (min-width: 800px) {	
+		.g-box {
+			width: 33.333%;
+		}
+
+		.g-box:nth-child(3n+3) {
+			padding-right: 0;
+		}
+	}
+	@media screen and (min-width: 480px) and (max-width: 800px) {	
+		.g-box {
+			width: 50%;
+		}
+
+		.g-box:nth-child(2n+2) {
+			padding-right: 0;
+		}
+	}
+	@media screen and (max-width: 480px) {	
+		.g-box {
+			padding: 0;
+			width: 100%;
+		}
+	}
 }
