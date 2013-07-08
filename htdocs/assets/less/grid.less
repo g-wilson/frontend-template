@@ -16,18 +16,6 @@ html, body {
 
 .contain {
 	margin: 0 auto;
-	// Clearfix
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.g-row {
-	width: 100%;
-	// Clearfix
-	content: "";
-	display: table;
-	clear: both;
 }
 
 // All columns
@@ -46,17 +34,17 @@ html, body {
 	float: none !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: @bp-medium) {
 		width: 100% !important;
 	}
 }
 
 // Grid for large screens.
-@media screen and (min-width: 480px) {
+@media screen and (min-width: @bp-small) {
 
 	.contain {
 		width: @page-width;
-		max-width: @max-page-width;
+		max-width: @bp-massive;
 	}
 
 	.g-1-1 {
@@ -117,7 +105,7 @@ html, body {
 }
 
 // Guttering for elements INSIDE grid elements
-@media screen and (min-width: 480px) {
+@media screen and (min-width: @bp-small) {
 
 	.g-row.g-pad [class*='g-'] {
 		padding-right: @gutter-width;
@@ -129,7 +117,7 @@ html, body {
 }
 
 // Grid for tiny screens
-@media screen and (max-width: 240px) {
+@media screen and (max-width: @bp-tiny) {
 
 	.contain {
 		width: 100%;
@@ -143,8 +131,8 @@ html, body {
 
 // Grid for most phones
 @media screen 
-	and (min-width: 241px) 
-	and (max-width: 479px) {
+	and (min-width: @bp-tiny) 
+	and (max-width: @bp-small) {
 
 	.contain {
 		width: 90%;
@@ -169,10 +157,10 @@ html, body {
 }
 
 @media screen 
-	and (min-width: 479px)
-	and (max-width: @max-page-width) {
+	and (min-width: @bp-small)
+	and (max-width: @bp-massive) {
 	.contain {
-		width: 90%;
+		width: @small-page-width;
 	}
 }
 
@@ -194,7 +182,7 @@ html, body {
 		padding-right: @gutter-width;
 	}
 
-	@media screen and (min-width: 800px) {	
+	@media screen and (min-width: @bp-medium) {	
 		.g-box {
 			width: 33.333%;
 		}
@@ -203,7 +191,7 @@ html, body {
 			padding-right: 0;
 		}
 	}
-	@media screen and (min-width: 480px) and (max-width: 800px) {	
+	@media screen and (min-width: @bp-small) and (max-width: @bp-medium) {	
 		.g-box {
 			width: 50%;
 		}
@@ -212,7 +200,7 @@ html, body {
 			padding-right: 0;
 		}
 	}
-	@media screen and (max-width: 480px) {	
+	@media screen and (max-width: @bp-small) {
 		.g-box {
 			padding: 0;
 			width: 100%;
