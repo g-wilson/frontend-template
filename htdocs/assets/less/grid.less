@@ -15,7 +15,12 @@ html, body {
 }
 
 .contain {
+	.cf;
 	margin: 0 auto;
+}
+
+.g-row {
+	.cf;
 }
 
 // All columns
@@ -142,13 +147,6 @@ html, body {
 		width: 100%;
 	}
 
-	.g-row.g-pad [class*='g-'] {
-		padding-right: @gutter-width;
-	}
-	.g-row.g-pad [class*='g-']:last-of-type {
-		padding-right: 0;
-	}
-
 	.g-1-1 {
 		width: 100% !important;
 		padding: 0;
@@ -176,10 +174,10 @@ html, body {
 
 // This type of grid makes it easy to iterate any number of (fixed height) grid "boxes" such as products
 .g-grid {
+	.cf;
 
 	.g-box {
 		float: left;
-		padding-right: @gutter-width;
 	}
 
 	@media screen and (min-width: @bp-medium) {	
@@ -187,9 +185,46 @@ html, body {
 			width: 33.333%;
 		}
 
-		.g-box:nth-child(3n+3) {
-			padding-right: 0;
+		.g-box:nth-child(3n+1) {
+			padding: 0 (@gutter-width/2) 0 0;
 		}
+		.g-box:nth-child(3n+2) {
+			padding: 0 (@gutter-width/4);
+		}
+		.g-box:nth-child(3n+3) {
+			padding: 0 0 0(@gutter-width/2);
+		}
+
+		&.g-grid-4 {
+			.g-box {
+				width: 25%;
+			}
+			.g-box:nth-child(4n+1) {
+				padding: 0 (@gutter-width/2) 0 0;
+			}
+			.g-box:nth-child(4n+2) {
+				padding: 0 (@gutter-width/4);
+			}
+			.g-box:nth-child(4n+3) {
+				padding: 0 (@gutter-width/4);
+			}
+			.g-box:nth-child(4n+4) {
+				padding: 0 0 0(@gutter-width/2);
+			}
+		}
+
+		&.g-grid-2 {
+			.g-box {
+				width: 50%;
+			}
+			.g-box:nth-child(2n+1) {
+				padding: 0 (@gutter-width/2) 0 0;
+			}
+			.g-box:nth-child(2n+2) {
+				padding: 0 0 0 (@gutter-width/2);
+			}
+		}
+
 	}
 	@media screen and (min-width: @bp-small) and (max-width: @bp-medium) {	
 		.g-box {
@@ -197,7 +232,7 @@ html, body {
 		}
 
 		.g-box:nth-child(2n+2) {
-			padding-right: 0;
+			padding: 0 0 0 @gutter-width;
 		}
 	}
 	@media screen and (max-width: @bp-small) {

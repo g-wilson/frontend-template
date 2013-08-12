@@ -11,7 +11,9 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-        <link rel="stylesheet" href="./assets/css/main.css" />
+       
+        <!--link rel="stylesheet" href="./assets/css/main.css" /-->
+        <link rel="stylesheet/less" href="./assets/less/main.less" />
 
         <script src="./assets/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -26,6 +28,75 @@
         </header>
 
         <div class="main">
+
+            <section class="g-row contain">
+
+                <h1>Forms</h1>
+
+                <form class="g-2-3 g-center panel form">
+                    <h1>Standard form</h1>
+                    <div class="field">
+                        <label class="field-label" for="inputEmail">Email</label>
+                        <div class="field-control">
+                          <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="inputPassword">Password</label>
+                        <div class="field-control">
+                          <input type="password" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="inputName">Name</label>
+                        <div class="field-control">
+                          <input type="text" id="inputName" placeholder="Joe Bloggs">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="field-label" for="inputTextarea">Address</label>
+                        <div class="field-control">
+                          <textarea id="inputTextarea" placeholder="Address"></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field-control">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="field-control">
+                            <button type="submit">Register</button>
+                            <button type="submit" class="btn-blue">Log in with Facebook</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!--form class="form inline g-1-1 panel">
+                    <h1>Inline form</h1>
+                    <input type="text" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <button type="submit" class="btn">Sign in</button>
+                </form-->
+
+                <div class="panel g-grid g-grid-4">
+                    <div class="g-box"><a class="btn">a.btn</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-green">a.btn-green</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-blue">a.btn-blue</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-orange">a.btn-orange</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-yellow">a.btn-yellow</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-lightgrey">a.btn-lightgrey</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-mediumgrey">a.btn-mediumgrey</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-darkgrey">a.btn-darkgrey</a><br><br></div>
+                    <div class="g-box"><a class="btn btn-black">a.btn-black</a><br><br></div>
+                </div>
+
+            </section>
 
             <section class="contain">
 
@@ -95,7 +166,7 @@
 
             </section>
 
-            <section class="g-row g-debug contain cf">
+            <section class="g-row g-debug contain">
 
                 <h4>Complete grid column reference</h4>
                 <p>This .g-row section has debug enabled (.g-debug) which shows the columns.</p>
@@ -152,6 +223,30 @@
                 <div class="g-1-1">.g-1-1</div>
 
             </section>
+
+            <section class="contain">
+
+                <h4>For a tile layout grid, use .g-grid and .g-box</h4>
+
+                <div class="g-grid g-grid-2">
+                    <div class="g-box"><p>g-grid-2 for 2-wide grid</p></div>
+                    <div class="g-box"><p>g-grid-2 for 2-wide grid</p></div>
+                </div>
+
+                <div class="g-grid">
+                    <div class="g-box"><p>g-grid for standard 3-wide grid</p></div>
+                    <div class="g-box"><p>g-grid for standard 3-wide grid</p></div>
+                    <div class="g-box"><p>g-grid for standard 3-wide grid</p></div>
+                </div>
+
+                <div class="g-grid g-grid-4">
+                    <div class="g-box"><p>g-grid-4 for 4-wide grid</p></div>
+                    <div class="g-box"><p>g-grid-4 for 4-wide grid</p></div>
+                    <div class="g-box"><p>g-grid-4 for 4-wide grid</p></div>
+                    <div class="g-box"><p>g-grid-4 for 4-wide grid</p></div>
+                </div>
+
+           </section>
 
         </div>
 
