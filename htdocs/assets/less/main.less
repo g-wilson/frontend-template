@@ -1,7 +1,6 @@
 // LESS FRAMEWORK
 
 // Imports
-	@import "../css/normalize.css"; // Browser resets
 	@import "grid.less"; // Grid system and responsive base
 	@import "global.less"; // Re-usable components or global styles
 	@import "forms.less"; // Self explanatory
@@ -13,15 +12,16 @@
 // Global variables
 
 	// Structural
-	@page-width: @bp-large;
+	@page-width: @bp-massive;
 	@small-page-width: 90%;
 	@gutter-width: 20px;
+	@bp-collapse: @bp-medium; // Grid collapse
 	// Breakpoints
-	@bp-tiny: 240px;
+	@bp-tiny: 300px;
 	@bp-small: 480px;
 	@bp-medium: 800px;
-	@bp-large: 960px;
-	@bp-massive: 1120px;
+	@bp-large: 1000px;
+	@bp-massive: 1160px;
 
 	// Colours
 	@c-white: #FFF;
@@ -37,8 +37,8 @@
 	@c-red: #D6454C;
 
 	// Typography
-	@f-body: 'Open Sans', sans-serif;
-	.f-headings { font-family: 'Open Sans', sans-serif; font-weight: bold; }
+	@f-body: sans-serif;
+	.f-headings { font-family: sans-serif; font-weight: bold; }
 
 	// Details
 	.rounded { border-radius: 5px; }
@@ -65,4 +65,29 @@
 	// Animation
 	.animate-width(@duration) {
 		-webkit-transition: width @duration;
+	}
+
+	.skew(@xdeg: -20deg,@ydeg: 0) {
+		-webkit-transform: skew(@xdeg,@ydeg);
+			-ms-transform: skew(@xdeg,@ydeg);
+				transform: skew(@xdeg,@ydeg);
+	}
+
+	// Gradients
+	.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	  background: @color;
+	  background: -webkit-gradient(linear,
+	                               left bottom,
+	                               left top,
+	                               color-stop(0, @start),
+	                               color-stop(1, @stop));
+	  background: -ms-linear-gradient(bottom,
+	                                  @start,
+	                                  @stop);
+	  background: -moz-linear-gradient(center bottom,
+	                                   @start 0%,
+	                                   @stop 100%);
+	  background: -o-linear-gradient(@stop,
+	                                 @start);
+	  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 	}

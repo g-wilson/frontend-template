@@ -24,7 +24,7 @@ html, body {
 }
 
 // All columns
-.g-row [class*='g-'] {
+.g-row > [class*='g-'] {
 	float: left;
 }
 
@@ -45,12 +45,7 @@ html, body {
 }
 
 // Grid for large screens.
-@media screen and (min-width: @bp-small) {
-
-	.contain {
-		width: @page-width;
-		max-width: @bp-massive;
-	}
+@media screen and (min-width: @bp-collapse) {
 
 	.g-1-1 {
 		width: 100%;
@@ -107,15 +102,20 @@ html, body {
 		width: 87.5%;
 	}
 
-}
+	// Outside gutter
+	.g-row {
+	  padding-left: @gutter-width;
+	}
 
-// Guttering for elements INSIDE grid elements
-@media screen and (min-width: @bp-small) {
-
-	.g-row.g-pad [class*='g-'] {
+	.contain {
+		max-width: @page-width;
 		padding-right: @gutter-width;
 	}
-	.g-row.g-pad [class*='g-']:last-of-type {
+
+	.g-row > [class*='g-'] {
+		padding-right: @gutter-width;
+	}
+	.g-row > [class*='g-']:last-of-type {
 		padding-right: 0;
 	}
 
@@ -128,8 +128,9 @@ html, body {
 		width: 100%;
 	}
 
-	.g-row [class*='g-'] {
+	.g-row > [class*='g-'] {
 		width: 100%;
+		padding: 0;
 	}
 
 }
@@ -137,13 +138,13 @@ html, body {
 // Grid for most phones
 @media screen 
 	and (min-width: @bp-tiny) 
-	and (max-width: @bp-small) {
+	and (max-width: @bp-collapse) {
 
 	.contain {
-		width: 90%;
+		width: @small-page-width;
 	}
 
-	.g-row [class*='g-'] {
+	.g-row > [class*='g-'] {
 		width: 100%;
 	}
 
@@ -154,14 +155,6 @@ html, body {
 
 }
 
-@media screen 
-	and (min-width: @bp-small)
-	and (max-width: @bp-massive) {
-	.contain {
-		width: @small-page-width;
-	}
-}
-
 // Debug colours expose grid columns
 .g-row.g-debug [class*='g-'] {
 	background: #F9F9F9;
@@ -170,75 +163,4 @@ html, body {
 }
 .g-row.g-debug [class*='g-']:nth-child(even) {
 	background: #DADADA;
-}
-
-// This type of grid makes it easy to iterate any number of (fixed height) grid "boxes" such as products
-.g-grid {
-	.cf;
-
-	.g-box {
-		float: left;
-	}
-
-	@media screen and (min-width: @bp-medium) {	
-		.g-box {
-			width: 33.333%;
-		}
-
-		.g-box:nth-child(3n+1) {
-			padding: 0 (@gutter-width/2) 0 0;
-		}
-		.g-box:nth-child(3n+2) {
-			padding: 0 (@gutter-width/4);
-		}
-		.g-box:nth-child(3n+3) {
-			padding: 0 0 0(@gutter-width/2);
-		}
-
-		&.g-grid-4 {
-			.g-box {
-				width: 25%;
-			}
-			.g-box:nth-child(4n+1) {
-				padding: 0 (@gutter-width/2) 0 0;
-			}
-			.g-box:nth-child(4n+2) {
-				padding: 0 (@gutter-width/4);
-			}
-			.g-box:nth-child(4n+3) {
-				padding: 0 (@gutter-width/4);
-			}
-			.g-box:nth-child(4n+4) {
-				padding: 0 0 0(@gutter-width/2);
-			}
-		}
-
-		&.g-grid-2 {
-			.g-box {
-				width: 50%;
-			}
-			.g-box:nth-child(2n+1) {
-				padding: 0 (@gutter-width/2) 0 0;
-			}
-			.g-box:nth-child(2n+2) {
-				padding: 0 0 0 (@gutter-width/2);
-			}
-		}
-
-	}
-	@media screen and (min-width: @bp-small) and (max-width: @bp-medium) {	
-		.g-box {
-			width: 50%;
-		}
-
-		.g-box:nth-child(2n+2) {
-			padding: 0 0 0 @gutter-width;
-		}
-	}
-	@media screen and (max-width: @bp-small) {
-		.g-box {
-			padding: 0;
-			width: 100%;
-		}
-	}
 }
