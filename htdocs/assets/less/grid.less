@@ -104,19 +104,15 @@ html, body {
 
 	// Outside gutter
 	.g-row {
-	  padding-left: @gutter-width;
 	}
 
 	.contain {
 		max-width: @page-width;
-		padding-right: @gutter-width;
+	  padding-left: @gutter-width;
 	}
 
 	.g-row > [class*='g-'] {
 		padding-right: @gutter-width;
-	}
-	.g-row > [class*='g-']:last-of-type {
-		padding-right: 0;
 	}
 
 }
