@@ -102,10 +102,7 @@ html, body {
 		width: 87.5%;
 	}
 
-	// Outside gutter
-	.g-row {
-	}
-
+	// Guttering
 	.contain {
 		max-width: @page-width;
 	  padding-left: @gutter-width;
@@ -113,6 +110,14 @@ html, body {
 
 	.g-row > [class*='g-'] {
 		padding-right: @gutter-width;
+	}
+
+	// Disable guttering
+	.g-nopad {
+		padding-right: @gutter-width;
+	}
+	.g-nopad > [class*='g-'] {
+		padding-right: 0;
 	}
 
 }
