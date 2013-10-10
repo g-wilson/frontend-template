@@ -91,3 +91,12 @@
 	                                 @start);
 	  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 	}
+
+	.NDgrad(@color: #CCC) {
+	  background: @color;
+	  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, darken(@color, 10%)), color-stop(1, lighten(@color, 10%)));
+	  background: -ms-linear-gradient(bottom, darken(@color, 10%), lighten(@color, 10%));
+	  background: -moz-linear-gradient(center bottom, darken(@color, 10%) 0%, lighten(@color, 10%) 100%);
+	  background: -o-linear-gradient(lighten(@color, 10%), darken(@color, 10%));
+	  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",lighten(@color, 10%),darken(@color, 10%)));
+	}
