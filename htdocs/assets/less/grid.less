@@ -17,10 +17,12 @@ html, body {
 .contain {
 	.cf;
 	margin: 0 auto;
+	position: relative;
 }
 
 .g-row {
 	.cf;
+	position: relative;
 }
 
 // All columns
@@ -44,90 +46,90 @@ html, body {
 	}
 }
 
-// Grid for large screens.
-@media screen and (min-width: @bp-collapse) {
-
-	.g-1-1 {
-		width: 100%;
-	}
-
-	.g-1-2 {
-		width: 50%;
-	}
-
-	.g-1-3 {
-		width: 33.333%;
-	}
-	.g-2-3 {
-		width: 66.666%;
-	}
-
-	.g-1-4 {
-		width: 25%;
-	}
-	.g-3-4 {
-		width: 75%;
-	}
-
-	.g-1-5 {
-		width: 20%;
-	}
-	.g-2-5 {
-		width: 40%;
-	}
-	.g-3-5 {
-		width: 60%;
-	}
-	.g-4-5 {
-		width: 80%;
-	}
-
-	.g-1-6 {
-		width: 16.666%;
-	}
-	.g-5-6 {
-		width: 83.335%;
-	}
-
-	.g-1-8 {
-		width: 12.5%;
-	}
-	.g-3-8 {
-		width: 37.5%;
-	}
-	.g-5-8 {
-		width: 62.5%;
-	}
-	.g-7-8 {
-		width: 87.5%;
-	}
-
-	// Guttering
-	.contain {
-		max-width: @page-width;
-	  padding-left: @gutter-width;
-	}
-
-	.g-row > [class*='g-'] {
-		padding-right: @gutter-width;
-	}
-
-	// Disable guttering
-	.g-nopad {
-		padding-right: @gutter-width;
-	}
-	.g-nopad > [class*='g-'] {
-		padding-right: 0;
-	}
-
+// Main grid
+.g-1-1 {
+	width: 100%;
 }
+
+.g-1-2 {
+	width: 50%;
+}
+
+.g-1-3 {
+	width: 33.333%;
+}
+.g-2-3 {
+	width: 66.666%;
+}
+
+.g-1-4 {
+	width: 25%;
+}
+.g-3-4 {
+	width: 75%;
+}
+
+.g-1-5 {
+	width: 20%;
+}
+.g-2-5 {
+	width: 40%;
+}
+.g-3-5 {
+	width: 60%;
+}
+.g-4-5 {
+	width: 80%;
+}
+
+.g-1-6 {
+	width: 16.666%;
+}
+.g-5-6 {
+	width: 83.335%;
+}
+
+.g-1-8 {
+	width: 12.5%;
+}
+.g-3-8 {
+	width: 37.5%;
+}
+.g-5-8 {
+	width: 62.5%;
+}
+.g-7-8 {
+	width: 87.5%;
+}
+
+// Guttering
+.contain {
+	max-width: @page-width;
+  padding-left: @gutter-width;
+}
+
+.g-row > [class*='g-'] {
+	padding-right: @gutter-width;
+}
+
+// Remove gutter for nested cols
+.g-row .g-row {
+	padding-right: 0;
+}
+
+// If there's no grid, add outside gutter
+.contain:not(.g-row) {
+	padding-right: @gutter-width;
+}
+
+// Disable guttering
+.g-nopad > [class*='g-'] {
+	padding-right: 0;
+}
+
 
 // Grid for tiny screens
 @media screen and (max-width: @bp-tiny) {
-
-	.contain {
-		width: 100%;
-	}
 
 	.g-row > [class*='g-'] {
 		width: 100%;
@@ -139,19 +141,24 @@ html, body {
 // Grid for most phones
 @media screen 
 	and (min-width: @bp-tiny) 
-	and (max-width: @bp-collapse) {
-
-	.contain {
-		width: @small-page-width;
-	}
+	and (max-width: @bp-small) {
 
 	.g-row > [class*='g-'] {
 		width: 100%;
 	}
 
-	.g-1-1 {
-		width: 100% !important;
-		padding: 0;
+}
+
+// Grid for most tablets
+@media screen 
+	and (min-width: @bp-small) 
+	and (max-width: @bp-collapse) {
+	
+	// Unless grid-small specified, collapse grid
+	.g-row:not(.g-small) {
+		& > [class*='g-'] {
+			width: 100%;
+		}
 	}
 
 }
