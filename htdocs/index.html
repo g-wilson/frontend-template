@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="./assets/css/normalize.css" />
+        <title>Frontend template</title>
+        <meta name="description" content="">
+
         <link rel="stylesheet" href="./assets/css/main.css" />
 
         <script src="./assets/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -18,7 +15,7 @@
     <body>
 
         <header class="site-header">
-            <div class="contain g-row">
+            <div class="contain">
 
                 <h1>Header</h1>
 
@@ -27,224 +24,298 @@
 
         <div class="main">
 
-            <section class="g-row contain">
+            <section class="grid contain">
 
                 <h1>Forms</h1>
 
-                <form class="g-2-3 g-center panel form">
-                    <h1>Standard form</h1>
-                    <div class="field">
-                        <label class="field-label" for="inputEmail">Email</label>
-                        <div class="field-control">
-                          <input type="text" id="inputEmail" placeholder="Email">
+                <div class="col-2-3 col-center">
+                    <form class="panel form">
+                        <div class="field">
+                            <label class="field-label" for="inputEmail">Email</label>
+                            <div class="field-control">
+                              <input type="text" id="inputEmail" placeholder="Email">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="field-label" for="inputPassword">Password</label>
-                        <div class="field-control">
-                          <input type="password" id="inputPassword" placeholder="Password">
+                        <div class="field">
+                            <label class="field-label" for="inputPassword">Password</label>
+                            <div class="field-control">
+                              <input type="password" id="inputPassword" placeholder="Password">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="field-label" for="inputName">Name</label>
-                        <div class="field-control">
-                          <input type="text" id="inputName" placeholder="Joe Bloggs">
+                        <div class="field">
+                            <label class="field-label" for="inputName">Name</label>
+                            <div class="field-control">
+                              <input type="text" id="inputName" placeholder="Joe Bloggs">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="field-label" for="inputTextarea">Address</label>
-                        <div class="field-control">
-                          <textarea id="inputTextarea" placeholder="Address"></textarea>
+                        <div class="field">
+                            <label class="field-label" for="inputTextarea">Address</label>
+                            <div class="field-control">
+                              <textarea id="inputTextarea" placeholder="Address"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="field-control">
-                            <label>
-                                <input type="checkbox"> Remember me
-                            </label>
+                        <div class="field">
+                            <div class="field-control">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="field-control">
-                            <button type="submit">Register</button>
-                            <button type="submit" class="btn-blue">Log in with Facebook</button>
+                        <div class="field">
+                            <div class="field-control">
+                                <button type="submit">Register</button>
+                                <button type="submit" class="btn-blue">Log in with Facebook</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
-                <div class="g-1-1">
+                <div class="col-1-1">
                     <div class="panel">
-                        <div class="g-row">
-                            <div class="g-1-5"><a class="btn">a.btn</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-green">a.btn-green</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-blue">a.btn-blue</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-orange">a.btn-orange</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-yellow">a.btn-yellow</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-red">a.btn-red</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-lightgrey">a.btn-lightgrey</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-mediumgrey">a.btn-mediumgrey</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-darkgrey">a.btn-darkgrey</a><br><br></div>
-                            <div class="g-1-5"><a class="btn btn-black">a.btn-black</a><br><br></div>
+                        <div class="grid grid-small">
+                            <div class="col-1-5"><a class="btn">a.btn</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-green">a.btn-green</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-blue">a.btn-blue</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-orange">a.btn-orange</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-yellow">a.btn-yellow</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-red">a.btn-red</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-lightgrey">a.btn-lightgrey</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-mediumgrey">a.btn-mediumgrey</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-darkgrey">a.btn-darkgrey</a><br><br></div>
+                            <div class="col-1-5"><a class="btn btn-black">a.btn-black</a><br><br></div>
                         </div>
                     </div>
                 </div>
 
             </section>
 
-            <section class="contain">
+            <div class="grid contain">
 
-                <div class="g-row">
+                <h1>Grid System</h1>
 
-                    <h1>Grid System</h1>
+                <p>Initialise the grid with a class="grid".</p>
+        
+                <div class="col-2-5"> 
+                    <div class="panel">
+                        <p>This is a .panel inside a .col-2-5</p>
+                    </div>
+                </div>
 
-                    <p>Initialise the grid with a class="g-row".</p>
+                <div class="col-3-5">
+                    <div class="panel">
+                        <p>This is a .panel inside a .col-3-5</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid contain">
+
+                <p>These columns are within a new .grid to stop them floating into the above elements and to disable the final gutter.</p>
+
+                <div class="col-1-3">
+                    <div class="panel">
+                        <p>This is a .panel inside a .col-1-3</p>
+                    </div>
+                </div>
+
+                <div class="col-1-3"> 
+                    <div class="panel">
+                        <p>This is a .panel inside a .col-1-3</p>
+                    </div>
+                </div>
+
+                <div class="col-1-3"> 
+                    <div class="panel">
+                        <p>This is a .panel inside a .col-1-3</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid contain">
             
-                    <div class="g-2-5"> 
-                        <div class="panel">
-                            <p>This is a .panel inside a .g-2-5</p>
-                        </div>
-                    </div>
+                <p>Grid columns can have nested grids of different ratio.</p>
 
-                    <div class="g-3-5">
-                        <div class="panel">
-                            <p>This is a .panel inside a .g-3-5</p>
-                        </div>
+                <div class="col-3-4">
+                    <div class="panel grid">
+                        <div class="col-1-3"><p>nested .col-1-3</p></div>
+                        <div class="col-1-3"><p>nested .col-1-3</p></div>
+                        <div class="col-1-3"><p>nested .col-1-3</p></div>
                     </div>
+                </div> 
 
+                <div class="col-1-4">
+                    <div class="panel">
+                        <p>Second column is a .col-1-4</p>
+                    </div>
                 </div>
 
-                <div class="g-row">
+            </div>
 
-                    <p>These columns are within a new .g-row to stop them floating into the above elements and to disable the final gutter.</p>
-
-                    <div class="g-1-3">
-                        <div class="panel">
-                            <p>This is a .panel inside a .g-1-3</p>
-                        </div>
-                    </div>
-
-                    <div class="g-1-3"> 
-                        <div class="panel">
-                            <p>This is a .panel inside a .g-1-3</p>
-                        </div>
-                    </div>
-
-                    <div class="g-1-3"> 
-                        <div class="panel">
-                            <p>This is a .panel inside a .g-1-3</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="g-row">
-                
-                    <p>Grid columns can have nested grids of different ratio.</p>
-
-                    <div class="g-3-4">
-                        <div class="panel g-row">
-                            <div class="g-1-3"><p>nested .g-1-3</p></div>
-                            <div class="g-1-3"><p>nested .g-1-3</p></div>
-                            <div class="g-1-3"><p>nested .g-1-3</p></div>
-                        </div>
-                    </div> 
-
-                    <div class="g-1-4">
-                        <div class="panel">
-                            <p>Second column is a .g-1-4</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="contain g-row">
+            <section class="contain grid">
 
                 <h2>Content grid</h2>
 
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
-                <div class="g-1-4">
+                <div class="col-1-4">
                     <div class="panel">
                         <p>Content</p>
                     </div>
                 </div>
 
             </section>
+
+
+            <section class="grid grid-debug contain">
+                 <h4>Complete grid column reference</h4>
+                 <p>This .grid section has debug enabled (.grid-debug) which shows the columns.</p>
+                 <div class="col-11-12">.col-11-12</div>
+                 <div class="col-1-12">.col-1-12</div>
+                 <div class="col-9-10">.col-9-10</div>
+                 <div class="col-1-10">.col-1-10</div>
+                 <div class="col-7-8">.col-7-8</div>
+                 <div class="col-1-8">.col-1-8</div>
+                 <div class="col-5-6">.col-5-6</div>
+                 <div class="col-1-6">.col-1-6</div>
+                 <div class="col-3-4">.col-3-4</div>
+                 <div class="col-1-4">.col-1-4</div>
+                 <div class="col-7-10">.col-7-10</div>
+                 <div class="col-3-10">.col-3-10</div>
+                 <div class="col-2-3">.col-2-3</div>
+                 <div class="col-1-3">.col-1-3</div>
+                 <div class="col-5-8">.col-5-8</div>
+                 <div class="col-3-8">.col-3-8</div>
+                 <div class="col-3-5">.col-3-5</div>
+                 <div class="col-2-5">.col-2-5</div>
+                 <div class="col-7-12">.col-7-12</div>
+                 <div class="col-5-12">.col-5-12</div>
+                 <div class="col-1-12">.col-1-12</div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-12"></div>
+                 <div class="col-1-10">.col-1-10</div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-10"></div>
+                 <div class="col-1-8">.col-1-8</div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-8"></div>
+                 <div class="col-1-6">.col-1-6</div>
+                 <div class="col-1-6"></div>
+                 <div class="col-1-6"></div>
+                 <div class="col-1-6"></div>
+                 <div class="col-1-6"></div>
+                 <div class="col-1-6"></div>
+                 <div class="col-1-5">.col-1-5</div>
+                 <div class="col-1-5"></div>
+                 <div class="col-1-5"></div>
+                 <div class="col-1-5"></div>
+                 <div class="col-1-5"></div>
+                 <div class="col-1-4">.col-1-4</div>
+                 <div class="col-1-4"></div>
+                 <div class="col-1-4"></div>
+                 <div class="col-1-4"></div>
+                 <div class="col-1-3">.col-1-3</div>
+                 <div class="col-1-3"></div>
+                 <div class="col-1-3"></div>
+                 <div class="col-1-2">.col-1-2</div>
+                 <div class="col-1-2"></div>
+                 <div class="col-1-1">.col-1-1</div>
+             </section>
 
         </div>
 

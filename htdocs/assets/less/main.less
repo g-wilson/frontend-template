@@ -1,15 +1,25 @@
+// ==============================
 // LESS FRAMEWORK
+// ==============================
 
-// Imports
-	@import "grid.less"; // Grid system and responsive base
-	@import "global.less"; // Re-usable components or global styles
-	@import "forms.less"; // Self explanatory
-// Site sections
-	@import "header.less";
-//	@import "navigation.less"
-	@import "footer.less";
 
-// Global variables
+// Imports =============================================
+
+	// Base
+	@import "base/mixins.less"; // Global mixins
+	@import "base/normalize.less"; // Normalize
+	@import "base/grid.less"; // Grid system
+	@import "base/global.less"; // Global styles
+	@import "base/forms.less"; // Forms
+	@import "base/buttons.less"; // Buttons
+	// Modules
+	@import "modules/modules.less"; // Smaller modules that don't need their own file
+	@import "modules/header.less";
+	@import "modules/footer.less";
+	// Pages
+
+
+// Global variables ====================================
 
 	// Structural
 	@page-width: @bp-massive;
@@ -39,64 +49,3 @@
 	// Typography
 	@f-body: sans-serif;
 	.f-headings { font-family: sans-serif; font-weight: bold; }
-
-	// Details
-	.rounded { border-radius: 5px; }
-
-	// Handy things
-	.no-select {
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-	.font-smoothing {
-		-webkit-font-smoothing: antialiased;
-				font-smoothing: antialiased;
-	}
-
-	.circle (@radius: 50px) {	
-		border-radius: @radius;
-		width: @radius; height: @radius;
-	}
-
-	// Animation
-	.animate-width(@duration) {
-		-webkit-transition: width @duration;
-	}
-
-	.skew(@xdeg: -20deg,@ydeg: 0) {
-		-webkit-transform: skew(@xdeg,@ydeg);
-			-ms-transform: skew(@xdeg,@ydeg);
-				transform: skew(@xdeg,@ydeg);
-	}
-
-	// Gradients
-	.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
-	  background: @color;
-	  background: -webkit-gradient(linear,
-	                               left bottom,
-	                               left top,
-	                               color-stop(0, @start),
-	                               color-stop(1, @stop));
-	  background: -ms-linear-gradient(bottom,
-	                                  @start,
-	                                  @stop);
-	  background: -moz-linear-gradient(center bottom,
-	                                   @start 0%,
-	                                   @stop 100%);
-	  background: -o-linear-gradient(@stop,
-	                                 @start);
-	  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
-	}
-
-	.NDgrad(@color: #CCC) {
-	  background: @color;
-	  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, darken(@color, 10%)), color-stop(1, lighten(@color, 10%)));
-	  background: -ms-linear-gradient(bottom, darken(@color, 10%), lighten(@color, 10%));
-	  background: -moz-linear-gradient(center bottom, darken(@color, 10%) 0%, lighten(@color, 10%) 100%);
-	  background: -o-linear-gradient(lighten(@color, 10%), darken(@color, 10%));
-	  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",lighten(@color, 10%),darken(@color, 10%)));
-	}

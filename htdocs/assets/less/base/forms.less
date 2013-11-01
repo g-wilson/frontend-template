@@ -1,0 +1,52 @@
+// Form element styling
+
+.form {
+
+	.field {
+		.cf; // Clearfix
+		width: 100%;
+		display: block;
+		margin: 10px 0;
+		
+		.field-label {
+			padding: 6px 15px 0 0;
+			float: left;
+			width: 30%;
+			text-align: right;
+		}
+		.field-control {
+			float: right;
+			width: 70%;
+		}
+	}
+
+	input[type="password"], 
+	input[type="email"], 
+	input[type="phone"], 
+	input[type="text"],  
+	textarea {
+		font-family: @f-body;
+		padding: 5px 10px;
+		border-radius: 5px;
+		outline: none;
+		border: 1px solid @c-lightgrey;
+		min-width: 70%;
+		max-width: 100%;
+
+		&:focus {
+			box-shadow: 0 0 5px 1px @c-turquoise;
+		}
+	}
+
+	input[type="checkbox"] {
+		margin-right: 5px;
+	}
+	
+	// Button inputs inherit button class
+	button, 
+	input[type="button"] {
+		.btn;
+	}
+
+
+}

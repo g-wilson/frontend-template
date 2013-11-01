@@ -1,5 +1,3 @@
-// Form element styling
-
 @btn-hover-lightness: 10%;
 
 .btn {
@@ -13,13 +11,12 @@
 	.font-smoothing;
 	font-family: @f-body;
 	font-weight: bold;
+	.no-select;
 
 	&.btn-inline { float: left; margin-right: 10px; }
 
 	&:active {
 		box-shadow: 0 2px 1px 0 rgba(0,0,0,0.5) inset;
-		padding-top: 12px;
-		padding-bottom: 8px;
 	}
 	&:hover {
 		background: lighten(@c-turquoise, @btn-hover-lightness);
@@ -65,58 +62,9 @@
 		background: @c-black;
 		&:hover { background: lighten(@c-black, @btn-hover-lightness); }
 	}
-}
 
 
-
-form.form {
-
-	.field {
-		.cf; // Clearfix
-		width: 100%;
+	@media screen and (max-width: @bp-small) {
 		display: block;
-		margin: 10px 0;
-		
-		.field-label {
-			padding: 6px 15px 0 0;
-			float: left;
-			width: 30%;
-			text-align: right;
-		}
-		.field-control {
-			float: right;
-			width: 70%;
-		}
 	}
-
-	h1 {
-		font-size: 1.2em;
-		border-bottom: 1px solid @c-lightgrey;
-		padding: 0 0 5px 0;
-		margin: 0;
-	}
-
-	input[type="password"], input[type="text"], textarea {
-		font-family: @f-body;
-		padding: 5px 10px;
-		border-radius: 5px;
-		outline: none;
-		border: 1px solid @c-lightgrey;
-		min-width: 70%;
-		max-width: 100%;
-
-		&:focus {
-			box-shadow: 0 0 5px 1px @c-turquoise;
-		}
-	}
-
-	input[type="checkbox"] {
-		margin-right: 5px;
-	}
-
-	button, input[type="button"] {
-		.btn;
-	}
-
-
 }
